@@ -1,0 +1,197 @@
+html,
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('D:\PersonalProjects\Portfolio\src\assets\fonts\Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+.pageTitleBox{
+    height: 10%;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.pageTitle{
+    color: white;
+    font-size: 50px
+}
+
+.aboutHome {
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    margin-top: 10vh;
+}
+
+.PersonImageBox {
+    margin-top: 0%;
+    margin-left: 55%;
+    height: 700px;
+    width: 700px;
+}
+
+.personImg {
+
+    width: 100%;
+    height: 100%;
+}
+
+.navButtonsDiv {
+    margin-right: 50px;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NameBox {
+    position: fixed;
+    color: black;
+    position: relative;
+    margin-top: 1vh;
+    margin-left: 3vh;
+    line-height: .5;
+    font-size: 3vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.false-navBar-button {
+    font-size: 17px;
+    border-radius: 5px;
+    color: black;
+    width: 20%;
+    height: 5vh;
+    background-color: white;
+    border: 0;
+}
+
+.true-navBar-button{
+    font-size: 17px;
+    border-radius: 5px;
+    color: black;
+    width: 20%;
+    height: 5vh;
+    background-color: white;
+    border: 0;
+    text-decoration:underline;
+    font-weight: bold;
+}
+
+.false-navBar-button:hover {
+    background-color: #02594e;
+    cursor: pointer;
+}
+
+.navBar {
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+    height: 10%;
+}
+
+.background1 {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    background-image: url("./assets/stackedGreen.svg");
+}
+
+.scrollSection {
+    height: 200vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    background: linear-gradient(to top,
+            #000000d3 0%,
+            #003223 100%);
+    z-index: -1;
+}
+
+.homeMain {
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: azure;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+/* .homeCard {
+    background-color: rgb(80, 79, 79);
+    width: 20%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.homeCard img {
+    height: 15vh;
+}
+
+.homeCard:hover {
+    background-color: rgb(116, 116, 116);
+    transform: scale(1.01);
+    box-shadow: 0 8px 12px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+} */
+
+.cardTitle {
+    margin-top: 15px;
+    font-size: 30px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.cardParagraph {
+    margin-top: 5%;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+@media (max-width: 900px) {
+    .homeMain {
+        flex-direction: column;
+        /* Stack items vertically on small screens */
+        align-items: center;
+    }
+
+    .homeCard {
+        width: 80%;
+        height: 100px;
+    }
+
+    .homeCard img {
+        display: none;
+    }
+
+    .cardParagraph {
+        margin-top: 5%;
+        font-size: 10px;
+        text-align: center;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
