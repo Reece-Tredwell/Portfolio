@@ -55,13 +55,13 @@ function App() {
             if (i >= textToPrint.length) {
                 clearInterval(timerRef);
             }
-            setText(textToPrint.substring(0, i+1 ))
+            setText(textToPrint.substring(0, i + 1))
             i++;
         }, 20);
     };
 
     useEffect(() => {
-        typeOutHeading("Hi, I'm Reece Tredwell👋")
+        typeOutHeading("Hi, I'm Reece Tredwell, Software Engineer")
         return () => {
             if (timerRef.current) {
                 clearInterval(timerRef.current);
@@ -89,6 +89,7 @@ function App() {
                     <div className='pageTitleBox'>
                         <h1 className='pageTitle'>{text}</h1>
                     </div>
+                    {/* <div className='aboutBlurb'></div> */}
                     <div className='PersonImageBox'>
                         <img src={PersonCoding} className='personImg'></img>
                     </div>
