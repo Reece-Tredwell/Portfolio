@@ -17,6 +17,19 @@ function App() {
     const [text, setText] = useState("");
     const [started, setStarted] = useState(false);
     const timerRef = useRef(null);
+    
+    const about = useRef(null)
+    const workExp = useRef(null)
+    const education = useRef(null)
+    const projects = useRef(null)
+    const contact = useRef(null)
+
+    const scrollTosection = (elementRef) => {
+        window.scrollTo({
+            top: elementRef.current.offsetTop,
+            behavior:'smooth',
+        });
+    }
 
     const setTrueorFalse = (type) => {
         setAboutButton(type === "about");
@@ -28,18 +41,23 @@ function App() {
 
     const setAbout = () => {
         setTrueorFalse("about")
+        scrollTosection(about)
     }
     const setWork = () => {
         setTrueorFalse("work")
+        scrollTosection(workExp)
     }
     const setEducation = () => {
         setTrueorFalse("education")
+        scrollTosection(education)
     }
     const setProject = () => {
         setTrueorFalse("projects")
+        scrollTosection(projects)
     }
     const setContact = () => {
         setTrueorFalse("contact")
+        scrollTosection(content)
     }
 
     const typeOutHeading = (text) => {
@@ -61,7 +79,7 @@ function App() {
     };
 
     useEffect(() => {
-        typeOutHeading("Hi, I'm Reece Tredwell, Software Engineer")
+        typeOutHeading("Hi, I'm Reece Tredwell, Student Software Engineer")
         return () => {
             if (timerRef.current) {
                 clearInterval(timerRef.current);
@@ -72,7 +90,7 @@ function App() {
 
     return (
         <div>
-            <section className='background1'>
+            <section ref={about }className='background1'>
                 <div className='navBar'>
                     <div className='NameBox'>
                         <h1>Reece Tredwell</h1>
@@ -89,13 +107,22 @@ function App() {
                     <div className='pageTitleBox'>
                         <h1 className='pageTitle'>{text}</h1>
                     </div>
-                    {/* <div className='aboutBlurb'></div> */}
+                    <div className='aboutBlurb'>
+                        <p>I am a software engineer undergraduate, currently in my penultimate year of university.<br></br><br></br>  I was born and raised in Sydney, Australia
+                            & I have approximately 2 years of profesional experience</p>
+                    </div>
                     <div className='PersonImageBox'>
                         <img src={PersonCoding} className='personImg'></img>
                     </div>
                 </div>
             </section>
             <section className='scrollSection'>
+                <div className='workExpArea' ref={workExp}></div>
+                <div className='educationArea' ref={education}></div>
+                <div className='projectsArea' ref={projects}></div>
+                <div ref={contact}></div>
+
+
 
             </section>
 
