@@ -17,7 +17,7 @@ function App() {
     const [text, setText] = useState("");
     const [started, setStarted] = useState(false);
     const timerRef = useRef(null);
-    
+
     const about = useRef(null)
     const workExp = useRef(null)
     const education = useRef(null)
@@ -27,7 +27,7 @@ function App() {
     const scrollTosection = (elementRef) => {
         window.scrollTo({
             top: elementRef.current.offsetTop,
-            behavior:'smooth',
+            behavior: 'smooth',
         });
     }
 
@@ -57,7 +57,7 @@ function App() {
     }
     const setContact = () => {
         setTrueorFalse("contact")
-        scrollTosection(content)
+        scrollTosection(contact)
     }
 
     const typeOutHeading = (text) => {
@@ -90,7 +90,7 @@ function App() {
 
     return (
         <div>
-            <section ref={about }className='background1'>
+            <div ref={about} className='background1'>
                 <div className='navBar'>
                     <div className='NameBox'>
                         <h1>Reece Tredwell</h1>
@@ -115,16 +115,21 @@ function App() {
                         <img src={PersonCoding} className='personImg'></img>
                     </div>
                 </div>
-            </section>
-            <section className='scrollSection'>
-                <div className='workExpArea' ref={workExp}></div>
-                <div className='educationArea' ref={education}></div>
-                <div className='projectsArea' ref={projects}></div>
-                <div ref={contact}></div>
-
-
-
-            </section>
+            </div>
+            <div className='scrollSection'>
+                <div className='workExpArea' ref={workExp}>
+                    <h1 className='header'>Work Experience</h1>
+                </div>
+                <div className='educationArea' ref={education}>
+                    <h1 className='header'>Education</h1>
+                </div>
+                <div className='projectsArea' ref={projects}>
+                    <h1 className='header'>Projects</h1>
+                </div>
+                <div className='contactArea' ref={contact}>
+                    <h1 className='header'>Contact</h1>
+                </div>
+            </div>
 
         </div>
     );
