@@ -59,7 +59,7 @@ function App() {
         setTrueorFalse("contact")
         scrollTosection(contact)
     }
-
+    
     const typeOutHeading = (text) => {
         const textToPrint = text
         if (started) {
